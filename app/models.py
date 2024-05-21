@@ -16,6 +16,9 @@ class Expenses(db.Model):
         self.date = date
         self.price = price
 
+    def __repr__(self):
+        return f'Expences content: id - {self.id}, description - {self.description}, date - {self.date}, price - {self.price}'
+
 class Tag(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), nullable=True)
